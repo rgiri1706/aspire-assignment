@@ -3,16 +3,11 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import NavItem from "./NavItem";
+import { navItemsList } from "@/app/config/constants";
 
 const Sidebar = () => {
     const pathname = usePathname();
-    const navItems = [
-        { href: '/', label: 'Home', icon: '/Home.svg' },
-        { href: '/cards', label: 'Cards', icon: '/Card.svg' },
-        { href: '/payments', label: 'Payments', icon: '/Payments.svg' },
-        { href: '/credit', label: 'Credit', icon: '/Credit.svg' },
-        { href: '/settings', label: 'Settings', icon: '/Account.svg' },
-      ];
+    const navItems = navItemsList;
     return (
         <div className="bg-dark-grey text-white pl-12 pt-12 pr-14 fixed top-0 left-0 h-screen flex flex-col lg:w-86 xl:w-96">
             <Image src="/Logo.svg" alt="Logo" width={125} height={35} />
