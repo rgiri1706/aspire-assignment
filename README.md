@@ -1,3 +1,7 @@
+<img width="1728" alt="Screenshot 2025-04-27 at 11 08 33 AM" src="https://github.com/user-attachments/assets/e885d924-0d37-4d3d-b021-6785edec0e09" />
+<img width="1728" alt="Screenshot 2025-04-27 at 11 08 25 AM" src="https://github.com/user-attachments/assets/a06b1213-47e6-436a-8082-55470854ae4e" />
+<img width="1728" alt="Screenshot 2025-04-27 at 11 08 13 AM" src="https://github.com/user-attachments/assets/aaeed9cb-06b2-4055-890d-8c63e66ab4b3" />
+<img width="1728" alt="Screenshot 2025-04-27 at 11 03 59 AM" src="https://github.com/user-attachments/assets/d37d4b68-d503-4bc5-8f4c-8920cf95f618" />
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -16,21 +20,11 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scenarios covered
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The cards dashboard exist on cards route ( /cards), have used typescript for type control and tailwindcss for styling.
+New cards can be added by clicking on new cards button.
+snap scroll is implemented for scrolling between cards.
+Currently desktop design only is implemented.
+Freeze/unfreeze card functionality also is available
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
