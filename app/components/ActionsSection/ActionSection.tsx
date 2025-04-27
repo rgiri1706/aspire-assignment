@@ -1,6 +1,23 @@
 import Image from "next/image";
 
-const ActionSection = ({freezeActiveCard, cardsList, activeIndex}: any) => {
+
+
+type Card = {
+    id: number;
+    name: string;
+    expiry: string;
+    cvv: string;
+    freezed: boolean;
+}
+
+interface ActionSectionProps {
+    freezeActiveCard: () => void;
+    cardsList: Card[];
+    activeIndex: number;
+  }
+
+
+const ActionSection = ({freezeActiveCard, cardsList, activeIndex}: ActionSectionProps) => {
     return (
         <div className="mt-8 bg-sky-blue rounded-2xl flex items-center justify-center gap-18 pt-5 pl-8 pr-8 pb-5">
             <button className="flex items-center flex-col cursor-pointer" onClick={()=> freezeActiveCard()}>

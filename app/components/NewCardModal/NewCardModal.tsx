@@ -4,9 +4,10 @@ import { useState } from 'react';
 const NewCardModal = ({ isOpen, onClose, onSubmit }: { 
     isOpen: boolean; 
     onClose: () => void; 
-    onSubmit: (cardDetails: { name: string; expiry: string; cvv: string, freezed: boolean }) => void 
+    onSubmit: (cardDetails: { id: number, name: string; expiry: string; cvv: string, freezed: boolean }) => void 
   }) => {
   const [cardDetails, setCardDetails] = useState({
+    id: 0,
     name: '',
     expiry: '',
     cvv: '',
@@ -21,7 +22,7 @@ const NewCardModal = ({ isOpen, onClose, onSubmit }: {
     event.preventDefault();
     onSubmit(cardDetails);
     onClose();
-    setCardDetails({ name: '', expiry: '', cvv: '', freezed: false, }); // Reset the form state
+    setCardDetails({ id:Math.random(), name: '', expiry: '', cvv: '', freezed: false, }); // Reset the form state
   };
 
   return (

@@ -7,6 +7,15 @@ import { useState } from "react";
 import NewCardModal from "../components/NewCardModal/NewCardModal";
 import { cards } from "../config/constants";
 
+
+type Card = {
+    id: number;
+    name: string;
+    expiry: string;
+    cvv: string;
+    freezed: boolean;
+}
+
 const Cards = () => {
     const tabsList = [{name: "My debit cards", id: 1, isActive: true}, {name: "All company cards", id: 2, isActive: false}];
     const cardsData = cards
@@ -14,7 +23,7 @@ const Cards = () => {
     const [cardsList, setCardsList] = useState(cardsData);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleAddCard = (newCard: any) => {
+    const handleAddCard = (newCard: Card) => {
       setCardsList([...cardsList, newCard]);
     };
   

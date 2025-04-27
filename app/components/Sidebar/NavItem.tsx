@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const NavItem = ({ href, icon, label, active }: any) => {
+const NavItem = ({ href, icon, label, active }: {href: string, icon: string, label: string, active: boolean}) => {
     return (
         <a
             href={href}

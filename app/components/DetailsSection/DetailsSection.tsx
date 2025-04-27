@@ -6,7 +6,15 @@ import { useState, useRef, useEffect } from "react";
 import RecentTransactions from "../RecentTransactions/RecentTransactions";
 import ActionSection from "../ActionsSection/ActionSection";
 
-const DetailsSection = ({cardsList, setCardsList}: {cardsList: any, setCardsList: any}) => {
+interface Card {
+    id: number;
+    name: string;
+    expiry: string;
+    cvv: string;
+    freezed: boolean;
+  }
+
+const DetailsSection = ({cardsList, setCardsList}: {cardsList: Card[], setCardsList: (newCardsList: Card[]) => void}) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -67,7 +75,7 @@ const DetailsSection = ({cardsList, setCardsList}: {cardsList: any, setCardsList
                         className="flex overflow-x-auto snap-x snap-mandatory h-76 gap-3.5 lg:w-84 xl:w-134 2xl:w-144"
                         style={{ scrollbarWidth: 'none' }}
                     >
-                        {cardsList.map((card: any, index: number) => (
+                        {cardsList.map((card: Card, index: number) => (
                             <div
                                 key={index + 'card'}
                                 className="snap-center shrink-0 w-full mx-auto"
@@ -77,7 +85,7 @@ const DetailsSection = ({cardsList, setCardsList}: {cardsList: any, setCardsList
                         ))}
                     </div>
                     <div className="flex justify-center mt-2 space-x-2">
-                        {cardsList.map((_: any, index: number) => (
+                        {cardsList.map((_: Card, index: number) => (
                             <div
                                 key={index + 'card-dot'}
                                 className={`w-2 h-2 rounded-full ${
